@@ -17,13 +17,13 @@ setCacheDir('data')
 
 cacheFile <- 'data/rsconf_tweets.rds'
 
-# This should go in ~/.Renviron but...
+# Load environment variables and generate a token
 # .TWITTER_APP="rtweet_things"
-# .TWITTER_CONSUMER_KEY="xxx"
-# .TWITTER_CONSUMER_SECRET="xxx"
+# .TWITTER_CONSUMER_KEY=Sys.getenv("TWITTER_CONSUMER_KEY")
+# .TWITTER_CONSUMER_SECRET=Sys.getenv("TWITTER_CONSUMER_SECRET")
 # .TWITTER_PAT="./rtweet.rds"
-
-# Twitter token created with...
+# 
+# # Twitter token created with...
 # twitter_token <- create_token(
 #   app = .TWITTER_APP,
 #   consumer_key = .TWITTER_CONSUMER_KEY,
