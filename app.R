@@ -26,9 +26,9 @@ close_to_sd <- function(lat, lng) {
   # location co-ordinates: 
   # location_coords <- rtweet::lookup_coords("Brisbane, AU")$point %>% as_radian
   
-  # Location coordinates for Brisbane, AU in degrees
+  # Location coordinates for Buenos Aires, Argentina in degrees
   
-  location_coords <- c("lat" = -27.46794, "lng" = 153.02809)
+  location_coords <- c("lat" = -34.603722, "lng" = -58.381592)
   location_coords <- location_coords %>% as_radian
   
   
@@ -67,6 +67,7 @@ ui <- fluidPage(
                tags$p(
                  "Made with", HTML("&#x2764;&#xFE0F;"), "+",  HTML("\u2615\uFE0F"), "by", 
                  tags$a(href = 'https://twitter.com/grrrck/', '@grrrck'),
+                 "Ported for IODC by",tags$a(href = 'https://twitter.com/apo_orv/', '@apo_orv'),
                  'with',  HTML("&#x1F4AA;"), 'from',
                  HTML(paste(
                    tags$a(href = 'http://rtweet.info/', 'rtweet'),
@@ -77,8 +78,8 @@ ui <- fluidPage(
                    sep = ', '
                  ))),
                tags$p(
-                 HTML("&#x1F4BE;"), tags$a(href = 'https://github.com/gadenbuie/rsconf_tweets', 'View on GitHub')
-                 , "or", downloadLink('download_tweets', "Download Tweets")
+                 HTML("&#x1F4BE;"), tags$a(href = 'https://github.com/apoorv74/iodc2018', 'View on GitHub')
+                 # , "or", downloadLink('download_tweets', "Download Tweets")
                )
              )
     )
