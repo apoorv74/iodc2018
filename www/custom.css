@@ -1,0 +1,16 @@
+.well.tweetbox {
+    background-color: #ffffff;
+    border: none;
+    padding: 0px;
+}
+
+.well.tweetbox blockquote {
+    margin: 0;
+    padding: 10px;
+    border: 1px solid #b0b0b0;
+    border-radius: 4px;
+}
+
+.colophon {
+  font-size: 75%;
+}
