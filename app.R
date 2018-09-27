@@ -51,7 +51,7 @@ ui <- fluidPage(
   tags$head(
     tags$link(rel = "stylesheet", type = "text/css", href = "custom.css"),
     tags$script(src="twitter.js")),
-  titlePanel("useR2018_twitter()"),
+  titlePanel("IODC2018_twitter()"),
   theme = shinythemes::shinytheme('yeti'),
   
   
@@ -125,13 +125,14 @@ server <- function(input, output) {
             'Has Link' = filter(x, !is.na(urls_url)),
             'Has Github Link' = filter(x, str_detect(urls_url, "github")),
             "Retweeted" = filter(x, retweet_count > 0),
-            "Favorited" = filter(x, favorite_count > 0),
-            "Probably There IRL" = x %>% lat_lng() %>%
-              filter(
-                str_detect(tolower(place_full_name), "brisbane") |
-                  close_to_sd(lat, lng) |
-                  user_id %in% users_there_IRL
-              )
+            "Favorited" = filter(x, favorite_count > 0)
+            # ,
+            # "Probably There IRL" = x %>% lat_lng() %>%
+            #   filter(
+            #     str_detect(tolower(place_full_name), "brisbane") |
+            #       close_to_sd(lat, lng) |
+            #       user_id %in% users_there_IRL
+            #   )
           )
         }
       }
