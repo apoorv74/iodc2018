@@ -164,8 +164,11 @@ server <- function(input, output) {
     if (input$view %in% c('All', 'Popular')) {
       tagList(
         checkboxGroupInput('filter_binary', 'Tweet Filters', 
-                           choices = c("Not Retweet", "Not Quote", "Has Media", "Has Link", "Has Github Link", "Retweeted", "Favorited", "Probably There IRL"), 
-                           selected = selected_binary,
+                           choices = c("Not Retweet", "Not Quote", "Has Media", "Has Link", "Has Github Link", "Retweeted", "Favorited"
+                                       # , "Probably There IRL"
+                                       )
+                            
+                           ,selected = selected_binary,
                            inline = TRUE),
         selectizeInput('filter_hashtag', 'Hashtags', choices = c("", hashtags_related()), selected = selected_hashtags, 
                        multiple = TRUE, options = list(plugins = list('remove_button')), width = "100%")

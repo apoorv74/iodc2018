@@ -56,7 +56,7 @@ get_new_tweets <- function(max_id) {
   # rstudio_conf_search <- c("useR2018")
   
   # Paste hashtags for the IODC 2018 conference
-  rstudio_conf_search <- c("IODC2018")
+  rstudio_conf_search <- c("IODC2018","IODC18")
  
   rstudio_conf_search <- paste(rstudio_conf_search, collapse = " OR ")
   
@@ -137,7 +137,7 @@ simpleCache('related_hashtags', {
            related %in% top_10_hashtags$`Top 10 Hashtags`)
 }, recreate = needs_pulled)
 
-simpleCache('users_there_IRL', {
-  # Get twitter people who are there from https://twitter.com/dataandme/lists/rstudioconf18
-  lists_members(908723077084827648, token = twitter_token) %>% pull(user_id)
-}, recreate = needs_pulled)
+# simpleCache('users_there_IRL', {
+#   # Get twitter people who are there from https://twitter.com/dataandme/lists/rstudioconf18
+#   lists_members(908723077084827648, token = twitter_token) %>% pull(user_id)
+# }, recreate = needs_pulled)
