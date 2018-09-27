@@ -4,7 +4,7 @@ A quick fix for your [IODC](https://www.opendatacon.org/#/) FOMO.
 
 Try it on [shinyapps.io](https://behindbars.shinyapps.io/iodc2018/) 
 
-To run this on your own, you need to create an OAuth twitter token for [`rtweet`][rtweet].
+To run this on your own, you need to create an OAuth twitter token for [`rtweet`](https://rtweet.info/).
 
 To have this app recognize your twitter PAT, you have a couple options:
 
