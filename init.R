@@ -10,7 +10,7 @@ lapply(packages, function(pkg) {
 })
 
 lapply(packages, require, character.only = TRUE)
-TWEET_REFRESH_ENABLED <- TRUE
+TWEET_REFRESH_ENABLED <- FALSE
 
 if (!dir.exists('data')) system('mkdir -p data')
 setCacheDir('data')
